@@ -6,4 +6,12 @@ edition = "2018"
 
 [dependencies]
 sdl2 = { version = "0.31.0", features = ["bundled", "static-link"] }
-gl = "0.10.0"
+gl = { path = "lib/gl" }
+failure = "0.1"
+failure_derive = "*"
+
+[features]
+gl_debug = ["gl/debug"]
+
+[build-dependencies]
+walkdir = "2.1"
